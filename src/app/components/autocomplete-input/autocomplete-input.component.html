@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="content">
+    <div class="search-box">
+      <input type="text" [formControl]="searchString">
+      <button (click)="alert()">search</button>
+    </div>
+
+    <ng-container *ngIf="(autocompleteList$ | async).length">
+      <div @inOutAnimation class="list-items-box">
+        <p *ngFor="let item of (autocompleteList$ | async)" (click)="select(item.name)">
+          {{item.name}}
+        </p>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

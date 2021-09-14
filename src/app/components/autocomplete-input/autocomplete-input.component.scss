@@ -1,0 +1,60 @@
+.container {
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .content {
+    width: 100%;
+    max-height: 400px;
+    transition: height 300ms ease-out;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .search-box {
+      height: 40px;
+      position: relative;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.253);
+        outline: none;
+        padding: 12px;
+        font-size: 17px;
+        padding-right: 110px;
+      }
+
+      button {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        color: white;
+        background-color: #FB5756;
+        border: none;
+        width: 100px;
+        height: 34px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+
+    .list-items-box {
+      max-height: 360px;
+      overflow-y: auto;
+      padding: 12px 0;
+
+      p {
+        padding: 5px 12px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(17, 17, 17, 0.05);
+        }
+      }
+    }
+  }
+}
